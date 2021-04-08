@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="/styles/login.css" media="screen" title="no title" charset="utf-8">
+{{!-- modal --}}
+<div class="modal" id="passModal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+        <div class="modal-card">
+            <header class="modal-card-head">
+                {{!-- empty header for looks --}}
+            </header>
+            <section class="modal-card-body">
+                <div class="content has-text-centered">
+                    <h1 class="title is-2">Passwords do not match</h1>
+                </div>
+            </section>
+            <footer class="modal-card-foot">
+                {{!-- empty modal footer for looks --}}
+            </footer>
+        </div>
+    </div>
+    {{!-- <button class="modal-close is-large" aria-label="close"></button> --}}
+</div>
+{{!-- end modal --}}
+<div class="section">
+    <!-- main container  -->
+    <div class="container">
+        <!-- title box -->
+        <div class="content wow fadeInUp">
+            <div class="has-text-centered">
+                <h1 class="title is-2">Create an account? I think so!</h1>
+            </div>
+        </div>
+        <!-- form area -->
+        <!-- owner form -->
+        <div class="level">
+            <div class="loginBox has-text-centered wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">
+                <form id="signup">
+                    <!-- username field -->
+                    <div class="field">
+                        <label class="label">Email</label>
+                        <div class="control">
+                            <input id="email-input" class="input" type="email" placeholder="Your email" />
+                        </div>
+                    </div>
+                    <!-- password field -->
+                    <div class="field">
+                        <label class="label">Password</label>
+                        <div class="control">
+                            <input id="password-input" class="input" type="password" placeholder="Your new password" />
+                        </div>
+                    </div>
+                    <!-- re-enter password field -->
+                    <div class="field">
+                        <label class="label">Re-Enter Password</label>
+                        <div class="control">
+                            <input id="password-check" class="input" type="password"
+                                placeholder="Re-enter your new password" onChange="checkPasswordMatch();" />
+                        </div>
+                        <div class="registrationFormAlert" id="divCheckPasswordMatch"></div>
+                    </div>
+                    <div class="field">
+                        <label class="label">Where are you?</label>
+                        <div class="control has-text-centered">
+                            <div class="select">
+                                <select>
+                                    <option>Austin, TX</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="has-text-centered">
+                        <button type="submit" class="button is-success is-rounded">Submit</button>
+                        <a href="/" class="button is-rounded">Back to Login</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/createAccount.js"></script>
