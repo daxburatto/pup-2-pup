@@ -1,31 +1,36 @@
-// import models
-const Product = require('./Product');
-const Category = require('./Category');
-const Tag = require('./Tag');
-const ProductTag = require('./ProductTag');
+// import all models
+const Dog = require('./dog');
+const Event = require('./event');
+const Park = require('./park');
+const User = require('./user');
+const Time = require('./time');
 
-// Products belongsTo Category
-Product.belongsTo(Category, {
-  foreignKey: 'category_id'
-});
-// Categories have many Products
-Category.hasMany(Product, {
-  foreignKey: 'category_id'
-});
-// Products belongToMany Tags (through ProductTag)
-Product.belongsToMany(Tag, {
-  through: ProductTag,
-  foreignKey: 'product_id'
-});
-// Tags belongToMany Products (through ProductTag)
-Tag.belongsToMany(Product, {
-  through: ProductTag,
-  foreignKey: 'tag_id'
+// create associations
+Dog.belongsTo(User, {
+  onDelete: 'SET NULL',
+  foreignKey: 'user_id'
 });
 
-module.exports = {
-  Product,
-  Category,
-  Tag,
-  ProductTag,
-};
+User.hasMany(Dog, {
+  foreignKey: 'user_id'
+});
+
+Event.belongsTo(Park, {
+  onDelete: 'SET NULL',
+  foreignKey: 'park_name'
+});
+
+Park.hasMany(Event, {
+  foreignKey: 'park_name'
+});
+
+
+Time.belongsTo(User, {
+  foreignKey: 'user_id'
+});
+
+Time.belongsTo(Park, {
+  foreignkey: "parkId"
+});
+
+module.exports = { Dog, Event, Park, User, Time };

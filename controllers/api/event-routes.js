@@ -1,22 +1,25 @@
 const router = require('express').Router();
-const { Category, Product } = require('../../models');
+const { User, Event, Park} = require('../../models');
 
-// The `/api/categories` endpoint
+// The `/api/events` endpoint
 
+// get all events
 router.get('/', (req, res) => {
-  // find all categories
-  // be sure to include its associated Products
+  // find all events
+  // be sure to include its associated Park and User
   console.log('======================');
-  Category.findAll({
+  Event.findAll({
     attributes: [
       'id',
-      'category_name'
+      'name',
+      'date',
+      'time'
     ],
-    order: [['category_name']],
+    order: [['id']],
     include: [
       {
-        model: Product,
-        attributes: ['id', 'product_name', 'price', 'stock'],
+        model: Park,
+        attributes: ['name']
       }
     ]
   })
@@ -27,22 +30,26 @@ router.get('/', (req, res) => {
     });
 });
 
+// get one event
 router.get('/:id', (req, res) => {
-  // find one category by its `id` value
-  // be sure to include its associated Products
-  Category.findOne({
+  // find a single event by its `id`
+  // be sure to include its associated User and Park
+  console.log('======================');
+  Event.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'category_name'
+      'name',
+      'date',
+      'time'
     ],
-    order: [['category_name', 'DESC']],
+    order: [['id']],
     include: [
       {
-        model: Product,
-        attributes: ['id', 'product_name', 'price', 'stock'],
+        model: Park,
+        attributes: ['name']
       }
     ]
   })
@@ -51,26 +58,30 @@ router.get('/:id', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-
 });
 
+// create new event
 router.post('/', (req, res) => {
-  // create a new category
-  Category.create({
-    category_name: req.body.category_name,
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+Event.create({
+  name: req.body.name,
+  date: req.body.date,
+  time: req.body.time,
+})
+.then(dbPostData => res.json(dbPostData))
+.catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
+  
 });
 
+// update event
 router.put('/:id', (req, res) => {
-  // update a category by its `id` value
-  Category.update(
+  Event.update(
     {
-      category_name: req.body.category_name
+      name: req.body.name,
+      date: req.body.date,
+      time: req.body.time,
     },
     {
       where: {
@@ -80,7 +91,7 @@ router.put('/:id', (req, res) => {
   )
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No category found with this id' });
+        res.status(404).json({ message: 'No event found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -91,16 +102,17 @@ router.put('/:id', (req, res) => {
     });
 });
 
+  // delete event by its `id` value
 router.delete('/:id', (req, res) => {
-  // delete a category by its `id` value
-  Category.destroy({
+
+  Event.destroy({
     where: {
       id: req.params.id
     }
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No category found with this id' });
+        res.status(404).json({ message: 'No event found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -110,5 +122,6 @@ router.delete('/:id', (req, res) => {
       res.status(500).json(err);
     });
 });
+
 
 module.exports = router;

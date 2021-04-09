@@ -1,24 +1,19 @@
 const router = require('express').Router();
-const { Tag, Product, ProductTag } = require('../../models');
+const { Park} = require('../../models');
 
-// The `/api/tags` endpoint
+// The `/api/parks` endpoint
 
+// get all parks
 router.get('/', (req, res) => {
-  // find all tags
-  // be sure to include its associated Product data
   console.log('======================');
-  Tag.findAll({
+  Park.findAll({
     attributes: [
       'id',
-      'tag_name'
+      'name',
+      'lat',
+      'long'
     ],
     order: [['id']],
-    include: [
-      {
-        model: Product,
-        attributes: ['id', 'product_name'],
-      }
-    ]
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -27,24 +22,20 @@ router.get('/', (req, res) => {
     });
 });
 
+// get one park
 router.get('/:id', (req, res) => {
-  // find a single tag by its `id`
-  // be sure to include its associated Product data
-  Tag.findOne({
+  console.log('======================');
+  Park.findOne({
     where: {
       id: req.params.id
     },
     attributes: [
       'id',
-      'tag_name'
+      'name',
+      'lat',
+      'long'
     ],
-    order: [['tag_name', 'DESC']],
-    include: [
-      {
-        model: Product,
-        attributes: ['id', 'product_name'],
-      }
-    ]
+    order: [['id']],
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -53,23 +44,28 @@ router.get('/:id', (req, res) => {
     });
 });
 
+// create new park
 router.post('/', (req, res) => {
-  // create a new tag
-  Tag.create({
-    tag_name: req.body.tag_name,
-  })
-    .then(dbPostData => res.json(dbPostData))
-    .catch(err => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+Park.create({
+  name: req.body.name,
+  lat: req.body.lat,
+  long: req.body.long,
+})
+.then(dbPostData => res.json(dbPostData))
+.catch(err => {
+  console.log(err);
+  res.status(500).json(err);
+});
+  
 });
 
+// update event
 router.put('/:id', (req, res) => {
-  // update a tag's name by its `id` value
-  Tag.update(
+  Park.update(
     {
-      tag_name: req.body.tag_name
+      name: req.body.name,
+      lat: req.body.lat,
+      long: req.body.long,
     },
     {
       where: {
@@ -79,7 +75,7 @@ router.put('/:id', (req, res) => {
   )
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No tag found with this id' });
+        res.status(404).json({ message: 'No park found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -90,16 +86,17 @@ router.put('/:id', (req, res) => {
     });
 });
 
+  // delete event by its `id` value
 router.delete('/:id', (req, res) => {
-  // delete on tag by its `id` value
-  Tag.destroy({
+
+  Park.destroy({
     where: {
       id: req.params.id
     }
   })
     .then(dbPostData => {
       if (!dbPostData) {
-        res.status(404).json({ message: 'No tag found with this id' });
+        res.status(404).json({ message: 'No park found with this id' });
         return;
       }
       res.json(dbPostData);
@@ -110,4 +107,4 @@ router.delete('/:id', (req, res) => {
     });
 });
 
-module.exports = router;
+  module.exports = router;

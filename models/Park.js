@@ -1,40 +1,41 @@
 const { Model, DataTypes } = require('sequelize');
-
 const sequelize = require('../config/connection');
 
-class ProductTag extends Model {}
+// create our User model
+class Park extends Model {
 
-ProductTag.init(
+}
+
+// create fields/columns for User model
+Park.init(
   {
-    // define columns
-    id: {
+    id:{
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    product_id: {
+
+    name: {
       type: DataTypes.STRING,
-      references: {
-        model: 'product',
-        key: 'id'
-      }
+      allowNull: false,
     },
-    tag_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'tag',
-        key: 'id'
-      }
+    lat: {
+      type: DataTypes.DOUBLE,
+      allowNull: false
+    },
+    long: {
+      type: DataTypes.DOUBLE,
+      allowNull: false
     }
   },
-  {
+  {  
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'product_tag',
+    modelName: 'park'
   }
 );
 
-module.exports = ProductTag;
+module.exports = Park;
