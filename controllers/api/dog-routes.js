@@ -83,7 +83,8 @@ router.post('/', (req, res) => {
       energy: req.body.energy,
       patience: req.body.patience,
       dominance: req.body.dominance,
-      image: req.body.image
+      image: req.body.image,
+      user_id: req.body.user_id
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {

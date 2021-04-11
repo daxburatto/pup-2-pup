@@ -11,7 +11,7 @@ async function dogFormHandler(event) {
   const dominance = document.querySelector('#dog-dominance').value.trim();
   const weight = document.querySelector('#dog-weight').value.trim();
   const image = document.querySelector('#dog-image').value.trim();
-
+  const user_id = document.querySelector('#user-id').value.trim();
   
     const response = await fetch('/api/dogs', {
       method: 'post',
@@ -25,7 +25,8 @@ async function dogFormHandler(event) {
         energy,
         patience,
         dominance,
-        image
+        image,
+        user_id
       }),
       headers: { 'Content-Type': 'application/json' }
     });
