@@ -27,6 +27,10 @@ Dog.init(
       type: DataTypes.STRING,
       allowNull: false
     },
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
     bio: {
       type: DataTypes.STRING,
       allowNull: false,

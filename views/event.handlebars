@@ -1,0 +1,18 @@
+<h1>Check Out Our Events!</h1>
+
+<br>
+
+<table class="table">
+  <tr>
+    <th scope="col">Event</th>
+    <th scope="col">Date</th>
+    <th scope="col">Time</th>
+  </tr>
+  {{#each events as |event|}}
+  <tr>
+    <td scope="row">{{event.name}}</td>
+    <td>{{event.date}}</td>
+    <td>{{event.time}}</td>
+  </tr>
+  {{/each}}
+</table>

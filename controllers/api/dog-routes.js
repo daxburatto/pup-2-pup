@@ -13,6 +13,7 @@ router.get('/', (req, res) => {
       'name',
       'gender',
       'breed',
+      'age',
       'bio',
       'weight',
       'energy',
@@ -20,11 +21,11 @@ router.get('/', (req, res) => {
       'dominance',
       'image'
     ],
-    order: [['name']],
+    order: [['id']],
     include: [
       {
         model: User,
-        attributes: ['id', 'name'],
+        attributes: ['id', 'name', 'email'],
       }
     ]
   })
@@ -46,6 +47,7 @@ router.get('/:id', (req, res) => {
       'name',
       'gender',
       'breed',
+      'age',
       'bio',
       'weight',
       'energy',
@@ -75,6 +77,7 @@ router.post('/', (req, res) => {
       name: req.body.name,
       gender: req.body.gender,
       breed: req.body.breed,
+      age: req.body.age,
       bio: req.body.bio,
       weight: req.body.weight,
       energy: req.body.energy,
@@ -96,6 +99,7 @@ router.put('/:id', (req, res) => {
       name: req.body.name,
       gender: req.body.gender,
       breed: req.body.breed,
+      age: req.body.age,
       bio: req.body.bio,
       weight: req.body.weight,
       energy: req.body.energy,
