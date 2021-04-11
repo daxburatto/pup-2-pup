@@ -3,15 +3,18 @@
   --primary-dark: #000; 
   --primary-white: #fff; 
   --primary-light-grey: #616161;
+  --primary-grey: #808080;
   --primary-rasp: #FF007F; 
   --primary-light-blue: #a9f2ff;
 }
 
-body {
-  background: linear-gradient(0.25turn, var(--primary-dark), var(--primary-light-grey), grey);
-}
-
 /***global***/
+
+body {
+  /* background-image: url(../assets/images/wolves.jpg); */
+  object-fit: cover; 
+  background: linear-gradient(0.25turn,#edcfb9, #fac358 , #c65f58);
+}
 
 h1 {
   color: var(--primary-white);  
@@ -19,21 +22,26 @@ h1 {
 }
 
 h2 {
-  color: var(--primary-light-blue);
+  color: var(--dark);
+}
+
+h5 {
+  color: var(--primary-dark); 
 }
 
 /***navbar/greeting***/
 
 nav {
-  background-color: var(--primary-light-grey); 
+  background: linear-gradient(0.25turn,#edcfb9, #fac358 , #c65f58);
 }
 
 nav a {
-  color: var(--primary-white) !important; 
+  color: var(--primary-dark) !important; 
+  font-weight: bold; 
 }
 
 nav a:hover {
-  border-top: 0.1875rem solid var(--primary-light-blue);
+  border-top: 0.1875rem solid var(--primary-dark);
 }
 
 .greeting span nav-greet {
@@ -96,14 +104,17 @@ nav a:hover {
 
 .homepage .dog-profile {
   border: 2.5px solid var(--primary-white); 
-   
 }
 
 .homepage .events-profile {
   border: 2.5px solid var(--primary-white); 
   background-color: var(--primary-light-grey);
-  opacity: 10%; 
+  opacity: 80%; 
   color: var(--primary-white); 
+}
+
+.homepage .textarea {
+  color: white; 
 }
 
 /***profile page***/
@@ -114,13 +125,20 @@ nav a:hover {
 
 .container {
   text-align: center;
-  color: var(--primary-white); 
+  color: var(--primary-dark); 
 }
 
 /***connect page***/
 
 table {
-  color: var(--primary-light-blue);
+  color: var(--primary-dark);
   text-transform: uppercase;
   justify-content: center; 
 }
+
+/***park***/
+
+footer {
+  text-align: center;
+}
+

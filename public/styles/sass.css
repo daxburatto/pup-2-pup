@@ -1,0 +1,390 @@
+html {
+    background-color: aquamarine;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /*Modal css*/
+  .modal-content {
+    padding-bottom: 20px;
+  }
+  
+  .modal-content .h2 {
+    font-size: 130%;
+  }
+  
+  .modal-content .h2 + p {
+    padding-top: 5px;
+  }
+  
+  .modal-content .float-left {
+    float: left;
+  }
+  
+  .modal-content .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Profile page*/
+  .dog-title {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    font: sans-serif;
+    font-size: 15%;
+  }
+  
+  .dog-title .item:last-child {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .dog-title .level {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  .center-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font: sans-serif;
+  }
+  
+  .dog-meter {
+    margin-left: 1rem;
+    white-space: nowrap;
+  }
+  
+  .profile {
+    font: sans-serif;
+  }
+  
+  .profile .dog-card {
+    color: #2a2a2a;
+    margin-top: 2rem;
+  }
+  
+  .card {
+    background-color: aquamarine;
+    border: 1rem dotted transparent;
+    border-radius: 3rem;
+  }
+  
+  .card .content {
+    font: sans-serif;
+  }
+  
+  .meter-block {
+    border-bottom: .1rem solid #ffffff;
+    border-left: .1rem solid #ffffff;
+    border-top: .1rem solid #ffffff;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    width: 1.5rem;
+  }
+  
+  .meter-block :last-child {
+    border: .1rem solid #ffffff;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    width: 1.5rem;
+  }
+  
+  .wrap-level {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  
+  #upload-feedback {
+    display: none;
+  }
+  
+  #upload-progress {
+    display: none;
+  }
+  
+  .button {
+    font: sans-serif;
+  }
+  
+  /*Event page*/
+  #attendeesBox {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    background-color: aquamarine;
+    border: 3px solid transparent;
+    border-radius: 1rem;
+    padding: 1rem;
+    height: 300px;
+    width: 100%;
+    overflow: auto;
+  }
+  
+  #attendeesBox h2 {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #attendeesBox h2::after {
+    display: block;
+    content: "";
+    margin: 1rem auto;
+    border: gold solid 1px;
+    width: 80%;
+  }
+  
+  .dropdown-item p:hover,
+  .attendee {
+    color: dodgerblue;
+  }
+  
+  .attendee-list li {
+    cursor: pointer;
+  }
+  
+  .attendee:focus,
+  .attendee:hover {
+    color: dodgerblue;
+  }
+  
+  #nameInPut::-webkit-input-placeholder {
+    color: aquamarine;
+    opacity: 1;
+  }
+  
+  #nameInPut:-ms-input-placeholder {
+    color: aquamarine;
+    opacity: 1;
+  }
+  
+  #nameInPut::-ms-input-placeholder {
+    color: aquamarine;
+    opacity: 1;
+  }
+  
+  #nameInPut::placeholder {
+    color: aquamarine;
+    opacity: 1;
+  }
+  
+  .chat {
+    border: 1rem solid gold;
+    padding: 1rem;
+  }
+  
+  .display-name {
+    color: #ffffff;
+  }
+  
+  .display-name :focus
+  :hover {
+    color: #2a2a2a;
+  }
+  
+  .navButton {
+    margin: 1rem;
+    color: gold;
+  }
+  
+  .navbar {
+    background-color: transparent;
+  }
+  
+  .navbar-item {
+    font: sans-serif;
+    max-height: 300px;
+  }
+  
+  .post {
+    background-color: aquamarine;
+    clear: both;
+    padding: .5rem;
+    margin-top: .5rem;
+  }
+  
+  .post :first-child {
+    margin-top: 0;
+  }
+  
+  .post-contents {
+    color: #000000;
+  }
+  
+  .your-post {
+    background-color: gold;
+  }
+  
+  #create-post {
+    padding-top: 1rem;
+  }
+  
+  /*Calendar page*/
+  body {
+    margin: 40px 10px;
+    padding: 0;
+    font: sans-serif;
+  }
+  
+  #calendar {
+    background-color: aquamarine;
+    margin: 1rem;
+    max-width: 900px;
+    padding: 2rem;
+  }
+  
+  .fc-content {
+    padding: .5rem;
+  }
+  
+  .fc-day-number {
+    color: dodgerblue;
+  }
+  
+  /*Day page*/
+  .day-title {
+    color: #2a2a2a;
+    font: sans-serif;
+  }
+  
+  .park-name {
+    font-size: 1.5trem;
+    font-weight: bold;
+    font: sans-serif;
+  }
+  
+  .show-on-map {
+    background: transparent;
+    border: none;
+  }
+  
+  .time-link {
+    background-color: aquamarine;
+    border-radius: 1rem;
+    display: inline-block;
+    padding: 1rem;
+    text-align: center;
+    width: 15rem;
+    color: dodgerblue;
+  }
+  
+  .time-link :focus,
+  .time-link :hover {
+    background-color: #2a2a2a;
+  }
+  
+  .time-list {
+    list-style-type: none !important;
+    margin-left: 0 !important;
+    margin-bottom: 2rem;
+  }
+  
+  .time-name {
+    font-weight: bold;
+  }
+  
+  .activeEvent {
+    background-color: gold;
+  }
+  
+  .activeEvent :focus,
+  .activeEvent :hover {
+    background-color: aquamarine;
+  }
+  
+  .userEvent {
+    color: gold;
+  }
+  
+  #map {
+    height: 400px;
+  }
+  
+  #park-list {
+    list-style-type: none;
+  }
+  
+  /*Chat box */
+  #chatBox {
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background-color: aquamarine;
+    padding: 5px;
+    border: 5px solid transparent;
+    border-radius: 1rem;
+  }
+  
+  #chatArea {
+    position: relative;
+    background-color: transparent;
+    overflow: auto;
+    height: 200px;
+    border-radius: 3px;
+  }
+  
+  #chatArea p {
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .myChat {
+    margin-left: auto;
+    text-align: right;
+    margin-top: 1rem;
+    margin-right: 3px;
+    max-width: 75%;
+  }
+  
+  .myChat p {
+    background-color: aquamarine;
+    padding: 0px 5px 0px 5px;
+    border: 1rem transparent solid;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .chatName {
+    color: #000000;
+  }
+  
+  .otherChat {
+    margin-left: 3px;
+    margin-right: auto;
+    margin-top: 1px;
+    max-width: 80%;
+  }
+  
+  .otherChat p {
+    background-color: aquamarine;
+    padding: 0px 5px 0px 5px;
+    border: 1rem transparent solid;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .search-title {
+    color: #000000 !important;
+    text-shadow: none;
+  }
+  /*# sourceMappingURL=sass.css.map */
