@@ -14,20 +14,12 @@ User.hasMany(Dog, {
   foreignKey: 'user_id'
 });
 
-Event.belongsTo(Park, {
-  foreignKey: 'park_name'
-});
-
-Park.hasMany(Event, {
-  foreignKey: 'park_name'
-});
-
-Time.belongsTo(User, {
+Event.belongsTo(User, {
   foreignKey: 'user_id'
 });
 
-Time.belongsTo(Park, {
-  foreignkey: "parkId"
+User.hasMany(Event, {
+  foreignKey: 'user_id'
 });
 
 module.exports = { Dog, Event, Park, User, Time };

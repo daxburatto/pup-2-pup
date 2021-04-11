@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Event, Park} = require('../../models');
+const { User, Event} = require('../../models');
 
 // The `/api/events` endpoint
 
@@ -17,10 +17,9 @@ router.get('/', (req, res) => {
     ],
     order: [['id']],
     include: [
-      {
-        model: Park,
-        attributes: ['name']
-      }
+      {model: User,
+      attributes: ['username']
+    }
     ]
   })
     .then(dbPostData => res.json(dbPostData))
@@ -47,10 +46,9 @@ router.get('/:id', (req, res) => {
     ],
     order: [['id']],
     include: [
-      {
-        model: Park,
-        attributes: ['name']
-      }
+      {model: User,
+      attributes: ['username']
+    }
     ]
   })
     .then(dbPostData => res.json(dbPostData))
@@ -66,6 +64,7 @@ Event.create({
   name: req.body.name,
   date: req.body.date,
   time: req.body.time,
+  user_id: req.body.user_id
 })
 .then(dbPostData => res.json(dbPostData))
 .catch(err => {
