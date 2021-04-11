@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 // see profile
 router.get("/Profile/:id", (req, res) => {
   console.log("======================");
+  
   User.findOne({
     where: {
       id: req.params.id
@@ -33,8 +34,9 @@ router.get("/Profile/:id", (req, res) => {
     ]
   })
     .then((dbUserData) => {
+      
       const user = dbUserData.get({ plain: true });
-
+      console.log(user);
       res.render("profile", {
         user,
         loggedIn: req.session.loggedIn,
@@ -100,7 +102,7 @@ router.get("/Dog/:id", (req, res) => {
   })
     .then((dbDogData) => {
       const dog = dbDogData.get({ plain: true });
-
+      console.log(dog);
       res.render("dog", {
         dog,
         loggedIn: req.session.loggedIn,
