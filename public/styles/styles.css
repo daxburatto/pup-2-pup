@@ -1,0 +1,126 @@
+:root {
+  --primary-maroon: #800000;
+  --primary-dark: #000; 
+  --primary-white: #fff; 
+  --primary-light-grey: #616161;
+  --primary-rasp: #FF007F; 
+  --primary-light-blue: #a9f2ff;
+}
+
+body {
+  background: linear-gradient(0.25turn, var(--primary-dark), var(--primary-light-grey), grey);
+}
+
+/***global***/
+
+h1 {
+  color: var(--primary-white);  
+  text-align: center; 
+}
+
+h2 {
+  color: var(--primary-light-blue);
+}
+
+/***navbar/greeting***/
+
+nav {
+  background-color: var(--primary-light-grey); 
+}
+
+nav a {
+  color: var(--primary-white) !important; 
+}
+
+nav a:hover {
+  border-top: 0.1875rem solid var(--primary-light-blue);
+}
+
+.greeting span nav-greet {
+  color: white; 
+}
+
+/***login form***/
+
+.login-form {
+  color: var(--primary-white);
+  margin-left: 10px; 
+  padding: 15.5px; 
+  text-align: center; 
+}
+
+.login-form h1 {
+  margin-left: 10px; 
+}
+
+.login-from button {
+  padding: 20px; 
+}
+
+.login-form label {
+  color: var(--primary-light-blue);
+}
+
+/***sign up form***/
+
+.signup-form {
+  color: var(--primary-white);
+  margin-left: 10px; 
+  padding: 15.5px; 
+  text-align: center;
+}
+
+.signup-form .email-sign {
+  padding: 15px; 
+}
+
+.signup-form label {
+  color: var(--primary-light-blue);
+}
+
+/***logout***/
+
+.logout-main h1 {
+  text-align: center;
+}
+
+.logout-main h2 {
+  text-align: center;
+}
+
+/***homepage***/
+
+.homepage {
+  text-align: center; 
+}
+
+.homepage .dog-profile {
+  border: 2.5px solid var(--primary-white); 
+   
+}
+
+.homepage .events-profile {
+  border: 2.5px solid var(--primary-white); 
+  background-color: var(--primary-light-grey);
+  opacity: 10%; 
+  color: var(--primary-white); 
+}
+
+/***profile page***/
+
+.profile-greeting {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  color: var(--primary-white); 
+}
+
+/***connect page***/
+
+table {
+  color: var(--primary-light-blue);
+  text-transform: uppercase;
+  justify-content: center; 
+}

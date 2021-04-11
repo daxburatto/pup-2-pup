@@ -8,6 +8,8 @@ const sequelize = require('../config/connection');
 const seedAll = async () => {
   await sequelize.sync({ force: true });
   console.log('\n----- DATABASE SYNCED -----\n');
+  await seedUsers();
+  console.log('\n----- USERS SEEDED -----\n');
   await seedDogs();
   console.log('\n----- DOGS SEEDED -----\n');
 
@@ -17,8 +19,7 @@ const seedAll = async () => {
   await seedParks();
   console.log('\n----- PARKS SEEDED -----\n');
 
-  await seedUsers();
-  console.log('\n----- USERS SEEDED -----\n');
+  
 
   process.exit(0);
 };

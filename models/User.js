@@ -21,7 +21,8 @@ User.init(
     },
     name: {
       type: DataTypes.STRING,
-      allowNull: false
+      defaultValue: "Anonomous",
+      allowNull: true
     },
     username: {
       type: DataTypes.STRING,

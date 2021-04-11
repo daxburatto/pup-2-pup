@@ -7,7 +7,6 @@ const Time = require('./time');
 
 // create associations
 Dog.belongsTo(User, {
-  onDelete: 'SET NULL',
   foreignKey: 'user_id'
 });
 
@@ -16,14 +15,12 @@ User.hasMany(Dog, {
 });
 
 Event.belongsTo(Park, {
-  onDelete: 'SET NULL',
   foreignKey: 'park_name'
 });
 
 Park.hasMany(Event, {
   foreignKey: 'park_name'
 });
-
 
 Time.belongsTo(User, {
   foreignKey: 'user_id'
