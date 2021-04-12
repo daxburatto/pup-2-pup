@@ -1,0 +1,130 @@
+/***global***/
+body {
+  /* background-image: url(../assets/images/wolves.jpg); */
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: -webkit-gradient(linear, left top, right top, from(#edcfb9), color-stop(#fac358), to(#c65f58));
+  background: linear-gradient(0.25turn, #edcfb9, #fac358, #c65f58);
+}
+
+h1 {
+  color: #fff;
+  text-align: center;
+}
+
+h2 {
+  color: var(--dark);
+}
+
+h5 {
+  color: #000;
+}
+
+/***navbar/greeting***/
+nav {
+  background: -webkit-gradient(linear, left top, right top, from(#edcfb9), color-stop(#fac358), to(#c65f58));
+  background: linear-gradient(0.25turn, #edcfb9, #fac358, #c65f58);
+}
+
+nav a {
+  color: #000 !important;
+  font-weight: bold;
+}
+
+nav a:hover {
+  border-top: 0.1875rem solid #000;
+}
+
+.greeting span nav-greet {
+  color: white;
+}
+
+/***login form***/
+.login-form {
+  color: #fff;
+  margin-left: 10px;
+  padding: 15.5px;
+  text-align: center;
+}
+
+.login-form h1 {
+  margin-left: 10px;
+}
+
+.login-from button {
+  padding: 20px;
+}
+
+.login-form label {
+  color: var(--primary-light-blue);
+}
+
+/***sign up form***/
+.signup-form {
+  color: #fff;
+  margin-left: 10px;
+  padding: 15.5px;
+  text-align: center;
+}
+
+.signup-form .email-sign {
+  padding: 15px;
+}
+
+.signup-form label {
+  color: var(--primary-light-blue);
+}
+
+/***logout***/
+.logout-main h1 {
+  text-align: center;
+}
+
+.logout-main h2 {
+  text-align: center;
+}
+
+/***homepage***/
+.homepage {
+  text-align: center;
+}
+
+.homepage .dog-profile {
+  border: 2.5px solid #fff;
+}
+
+.homepage .events-profile {
+  border: 2.5px solid #fff;
+  background-color: #616161;
+  opacity: 80%;
+  color: #fff;
+}
+
+.homepage .textarea {
+  color: #fff;
+}
+
+/***profile page***/
+.profile-greeting {
+  text-align: center;
+}
+
+.container {
+  text-align: center;
+  color: #000;
+}
+
+/***connect page***/
+table {
+  color: #000;
+  text-transform: uppercase;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/***park***/
+footer {
+  text-align: center;
+}
+/*# sourceMappingURL=sass.css.map */
