@@ -1,15 +1,24 @@
 const router = require('express').Router();
+<<<<<<< HEAD
 const { User, Dog} = require('../../models');
+=======
+const { User } = require('../../models');
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b
 
 // The `/api/users` endpoint
 
 router.get('/', (req, res) => {
   // find all users
+<<<<<<< HEAD
   // be sure to include their associated dogs
+=======
+  // be sure to include its associated Products
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b
   console.log('======================');
   User.findAll({
     attributes: [
       'id',
+<<<<<<< HEAD
       'name',
       'username',
       'email',
@@ -23,6 +32,14 @@ router.get('/', (req, res) => {
         attributes: ['id', 'name', 'breed'],
       }
     ]
+=======
+      'dog_name',
+      'owner_name',
+      'dog_age',
+      'dog_breed',
+    ],
+    order: [['dog_name']],
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b
   })
     .then(dbPostData => res.json(dbPostData))
     .catch(err => {
@@ -31,6 +48,7 @@ router.get('/', (req, res) => {
     });
 });
 
+<<<<<<< HEAD
 router.get('/:id', (req, res) => {
   // find one user by their `id` value
   User.findOne({
@@ -170,3 +188,6 @@ router.post('/logout', (req, res) => {
 });
 
 module.exports = router;
+=======
+module.exports = router
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b

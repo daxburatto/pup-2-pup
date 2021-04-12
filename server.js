@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const path = require('path');
 const express = require('express');
 const session = require('express-session');
@@ -34,3 +35,24 @@ app.use(controllers);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening'));
 });
+=======
+const path = require('path')
+const express = require('express')
+const session = require('express-session')
+const sequelize = require('./config/connection')
+const exphbs = require('express-handlebars')
+
+const app = express()
+const PORT = process.env.PORT || 3001
+
+app.use(express.json())
+app.use(express.urlencoded({ extended: true }))
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(require('./controllers/'))
+
+sequelize.sync({ force: false }).then(() => {
+    app.listen(PORT, () => console.log('Now Listening'))
+})
+
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b

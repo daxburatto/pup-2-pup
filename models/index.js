@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // import all models
 const Dog = require('./dog');
 const Event = require('./event');
@@ -23,3 +24,8 @@ User.hasMany(Event, {
 });
 
 module.exports = { Dog, Event, Park, User, Time };
+=======
+const User = require('./User')
+
+module.exports = { User }
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b

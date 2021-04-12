@@ -1,4 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
+<<<<<<< HEAD
 const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
@@ -13,12 +14,23 @@ class User extends Model {
 // create fields/columns for User model
 User.init(
   {
+=======
+
+const sequelize = require('../config/connection.js');
+
+class User extends Model {}
+
+User.init(
+  {
+    // define columns
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
+<<<<<<< HEAD
     name: {
       type: DataTypes.STRING,
       defaultValue: "Anonomous",
@@ -64,11 +76,35 @@ User.init(
         return updatedUserData;
       }
     },
+=======
+    dog_name: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    owner_name: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+    dog_age: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    dog_breed: {
+        type: DataTypes.STRING,
+        allowNull: false
+    },
+  },
+  {
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+<<<<<<< HEAD
     modelName: 'user'
+=======
+    modelName: 'user',
+>>>>>>> fc8380b90b83a50e348f8bb26231bcf1b594241b
   }
 );
 
