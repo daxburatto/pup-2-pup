@@ -1,280 +1,144 @@
-$font-stack: sans-serif;
-$primary-color: rgb(30,144,255);
-$max-height: 300px;
-$background-color: rgb(127,255,212);
-$font-size: 15%;
-$margins: 1rem;
-$display: flex;
-$secondary-color: rgb(255,215,0);
-
-html{
-  background-color: $background-color;
-  background-position: center;
-  background-size: cover;
-}
-/*Modal css*/
-.modal-content {
-  padding-bottom: 20px;
-
-  .h2{font-size: 130%; }
+$dark: #000; 
+$white: #fff; 
+$grey: #616161;
+$grey2: #808080;
+$light-orange: #edcfb9;
+$yellow: #fac358;
+$sky-pink: #c65f58;
   
-  .h2+p {
-    padding-top: 5px;
+
+  /***global***/
+  
+  body {
+    /* background-image: url(../assets/images/wolves.jpg); */
+    object-fit: cover; 
+    background: linear-gradient(0.25turn,$light-orange, $yellow , $sky-pink);
   }
-  .float-left {
-    float:left;
+  
+  h1 {
+    color: $white;  
+    text-align: center; 
   }
-  .clearfix::after{
-    content: "";
-    clear:both;
-    display: table;
+  
+  h2 {
+    color: var(--dark);
   }
-} 
-/* Profile page*/
-.dog-title {
-  margin-right: $margins;
-  margin-bottom: $margins;
-  font: $font-stack;
-  font-size: $font-size;
-  .item:last-child {
-    margin-left: 0;
-    margin-right: 0;
+  
+  h5 {
+    color: $dark; 
   }
-  .level{
-    align-items: start;
-    display: $display;
-    flex-direction: row;
-    flex-wrap: wrap;
+  
+  /***navbar/greeting***/
+  
+  nav {
+    background: linear-gradient(0.25turn,$light-orange, $yellow , $sky-pink);
   }
-}
-.center-column {
-  display:$display;
-  flex-direction: column;
-  align-items: center;
-  font: $font-stack;
-}
-.dog-meter {
-  margin-left:$margins;
-  white-space: nowrap;
-}
-.profile {
-  font: $font-stack;
-  .dog-card{ 
-    color: #2a2a2a;
-    margin-top: 2rem;
+  
+  nav a {
+    color: $dark !important; 
+    font-weight: bold; 
   }
-}
-.card{
-  background-color: $background-color;
-  border:$margins dotted transparent;
-  border-radius: 3rem;
-  .content{ font: $font-stack;}
-}
-.meter-block {
-  border-bottom: .1rem solid #ffffff;
-  border-left: .1rem solid #ffffff;
-  border-top: .1rem solid #ffffff;
-  display: inline-block;
-  padding: 0;
-  text-align: center;
-  width: 1.5rem;
-  :last-child{
-    border: .1rem solid #ffffff;
-    display: inline-block;
-    padding: 0;
+  
+  nav a:hover {
+    border-top: 0.1875rem solid $dark;
+  }
+  
+  .greeting span nav-greet {
+    color: white; 
+  }
+  
+  /***login form***/
+  
+  .login-form {
+    color: $white;
+    margin-left: 10px; 
+    padding: 15.5px; 
+    text-align: center; 
+  }
+  
+  .login-form h1 {
+    margin-left: 10px; 
+  }
+  
+  .login-from button {
+    padding: 20px; 
+  }
+  
+  .login-form label {
+    color: var(--primary-light-blue);
+  }
+  
+  /***sign up form***/
+  
+  .signup-form {
+    color: $white;
+    margin-left: 10px; 
+    padding: 15.5px; 
     text-align: center;
-    width: 1.5rem;
   }
-}
-.wrap-level {
-  flex-wrap: wrap;
-}
-#upload-feedback {
-  display: none;
-}
-#upload-progress {
-  display: none;
-}
-.button {
-  font: $font-stack;
-}
-/*Event page*/
-#attendeesBox {
-  box-sizing: border-box;
-  background-color: $background-color;
-  border: 3px solid transparent;
-  border-radius: $margins;
-  padding: $margins;
-  height:$max-height;
-  width: 100%;
-  overflow: auto;
-    h2 {
-      margin: 0;
-      padding: 0;
-    } h2::after {
-      display: block;
-      content: "";
-      margin: $margins auto;
-      border:$secondary-color solid 1px;
-      width: 80%;
-    }
-}
-
-.dropdown-item p:hover,
-.attendee{ color: $primary-color;}
-.attendee-list li {cursor: pointer;}
-.attendee:focus,
-.attendee:hover { color:$primary-color}
-#nameInPut::placeholder {
-  color: $background-color;
-  opacity: 1;
-}
-.chat {
-  border: $margins solid $secondary-color;
-  padding: $margins;
-}
-.display-name {
-  color: #ffffff;
-  :focus
-  :hover{
-    color: #2a2a2a;
+  
+  .signup-form .email-sign {
+    padding: 15px; 
   }
-}
-.navButton{
-  margin: $margins;
-  color: $secondary-color;
-}
-.navbar {
-  background-color: transparent;
-}
-.navbar-item {
-  font: $font-stack;
-  max-height: $max-height;
-}
-.post {
-  background-color: $background-color;
-  clear: both;
-  padding: .5rem;
-  margin-top: .5rem;
-  :first-child {margin-top: 0;}
-}
-.post-contents {color: #000000;}
-.your-post{background-color: $secondary-color;}
-#create-post{padding-top: 1rem;}
-/*Calendar page*/
-body{
-  margin: 40px 10px;
-  padding: 0;
-  font: $font-stack;
-}
-#calendar {
-  background-color: $background-color;
-  margin: $margins;
-  max-width: 900px;
-  padding: 2rem;
-}
-.fc-content {padding: .5rem;}
-.fc-day-number {
-  color: $primary-color;
-}
-/*Day page*/
-.day-title {
-  color: #2a2a2a;
-  font: $font-stack;
-}
-.park-name{
-  font-size: 1.5trem;
-  font-weight: bold;
-  font: $font-stack;
-}
-.show-on-map {
-  background:transparent;
-  border: none;
-}
-.time-link {
-  background-color: $background-color;
-  border-radius: $margins;
-  display: inline-block;
-  padding: $margins;
-  text-align: center;
-  width: 15rem;
-  color: $primary-color;
-  :focus,
-  :hover{
-    background-color: #2a2a2a;
+  
+  .signup-form label {
+    color: var(--primary-light-blue);
   }
-}
-.time-list {
-  list-style-type: none !important;
-  margin-left: 0 !important;
-  margin-bottom: 2rem;
-}
-.time-name {
-  font-weight: bold;
-}
-.activeEvent {
-  background-color:$secondary-color ;
-  :focus,
-  :hover {background-color: $background-color;}
-}
-.userEvent {
-  color: $secondary-color;
-}
-#map {height: 400px;}
-#park-list {list-style-type: none;}
-
-/*Chat box */
-#chatBox {
-  height: $max-height;
-  width: 100%;
-  overflow: hidden;
-  background-color: $background-color;
-  padding: 5px;
-  border: 5px solid transparent;
-  border-radius: $margins;
-}
-#chatArea {
-  position: relative;
-  background-color: transparent;
-  overflow: auto;
-  height: 200px;
-  border-radius: 3px;
-  p{
-    margin: 0;
-    cursor: pointer;
+  
+  /***logout***/
+  
+  .logout-main h1 {
+    text-align: center;
   }
-}
-.myChat {
-  margin-left: auto;
-  text-align: right;
-  margin-top: $margins;
-  margin-right: 3px;
-  max-width: 75%;
-  p{
-    background-color: $background-color;
-    padding: 0px 5px 0px 5px;
-    border: $margins transparent solid;
-    border-radius: 5px;
-    display: inline-block;
+  
+  .logout-main h2 {
+    text-align: center;
   }
-}
-.chatName {
-  color: #000000;
-}
-.otherChat {
-  margin-left: 3px;
-  margin-right: auto;
-  margin-top: 1px;
-  max-width: 80%;
-  p{
-    background-color: $background-color;
-    padding: 0px 5px 0px 5px;
-    border: $margins transparent solid;
-    border-radius: 5px;
-    display: inline-block;
+  
+  /***homepage***/
+  
+  .homepage {
+    text-align: center; 
   }
-}
-.search-title {
-  color: #000000 !important;
-  text-shadow: none;
-}
+  
+  .homepage .dog-profile {
+    border: 2.5px solid $white; 
+  }
+  
+  .homepage .events-profile {
+    border: 2.5px solid $white; 
+    background-color: $grey;
+    opacity: 80%; 
+    color: $white; 
+  }
+  
+  .homepage .textarea {
+    color: $white; 
+  }
+  
+  /***profile page***/
+  
+  .profile-greeting {
+    text-align: center;
+  }
+  
+  .container {
+    text-align: center;
+    color: $dark; 
+  }
+  
+  /***connect page***/
+  
+  table {
+    color: $dark;
+    text-transform: uppercase;
+    justify-content: center; 
+  }
+  
+  /***park***/
+  
+  footer {
+    text-align: center;
+  }
+  
+  
