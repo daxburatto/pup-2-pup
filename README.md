@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# e-commerce
-=======
 # Pup-2-Pup
 
 ## Description 
@@ -12,7 +9,7 @@ The owners for each dog can also be conttacted through email for meeting outside
 Clone the application from the command line and run 'npm i' to install the necessary dependencies. 
 
 ## Usage
-To run this application, run: npm start to use on a local server 3001 after cloning the repository and installing the necessary dependencies. Additioanlly, is it deployed live at Heroku at ...
+To run this application, run: npm start to use on a local server 3001 after cloning the repository and installing the necessary dependencies. Additioanlly, is it deployed live at Heroku at https://agile-retreat-56267.herokuapp.com/.
 
 ### Built With 
 
@@ -31,10 +28,10 @@ To run this application, run: npm start to use on a local server 3001 after clon
  * Daylan, Sunisa, Chris handled research for new technologies to use in this project
 
  ## Future Development Plans
- -Favorites list of dogs/owners
- -Search functionality for dogs and owners
- -Real time chatting between users
- -Rating system
- -Adding Google Maps in to event section
- -Add events or parks
->>>>>>> merging
+ * Favorites list of dogs/owners
+ * Search functionality for dogs and owners
+ * Real time chatting between users
+ * Rating system
+ * Adding Google Maps in to event section
+ * Add events or parks
+
