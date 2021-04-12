@@ -1,0 +1,27 @@
+  
+<h1>Check Out Our Parks!</h1>
+
+<br>
+
+<table class="table">
+  <tr>
+    <th scope="col">Park</th>
+    <th scope="col">Longitude</th>
+    <th scope="col">Latitude</th>
+  </tr>
+  {{#each parks as |park|}}
+  <tr>
+    <td scope="row">{{park.name}}</td>
+    <td>{{park.long}}</td>
+    <td>{{park.lat}}</td>
+  </tr>
+  {{/each}}
+</table>
+
+<br><br>
+<br><br>
+<br><br>
+
+<footer class = "park-footer">
+<h5>Want to add a new park or don't see one close by? Send an email and let us know!</h5>
+</footer>

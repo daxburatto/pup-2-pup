@@ -1,0 +1,21 @@
+  
+<h1>Click on a dog below to get in contact with the owner!</h1>
+
+<br>
+
+<table class="table">
+  <tr>
+    <th scope="col">Dog Name</th>
+    <th scope="col">Breed</th>
+    <th scope="col">Gender</th>
+    <th scope="col">Age</th>
+  </tr>
+  {{#each dogs as |dog|}}
+  <tr>
+    <td scope="row"> <a href="Dog/{{dog.id}}">{{dog.name}}</a></td>
+    <td>{{dog.breed}}</td>
+    <td>{{dog.gender}}</td>
+    <td>{{dog.age}}</td>
+  </tr>
+  {{/each}}
+</table>

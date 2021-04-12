@@ -1,0 +1,144 @@
+$dark: #000; 
+$white: #fff; 
+$grey: #616161;
+$grey2: #808080;
+$light-orange: #edcfb9;
+$yellow: #fac358;
+$sky-pink: #c65f58;
+  
+
+  /***global***/
+  
+  body {
+    /* background-image: url(../assets/images/wolves.jpg); */
+    object-fit: cover; 
+    background: linear-gradient(0.25turn,$light-orange, $yellow , $sky-pink);
+  }
+  
+  h1 {
+    color: $white;  
+    text-align: center; 
+  }
+  
+  h2 {
+    color: var(--dark);
+  }
+  
+  h5 {
+    color: $dark; 
+  }
+  
+  /***navbar/greeting***/
+  
+  nav {
+    background: linear-gradient(0.25turn,$light-orange, $yellow , $sky-pink);
+  }
+  
+  nav a {
+    color: $dark !important; 
+    font-weight: bold; 
+  }
+  
+  nav a:hover {
+    border-top: 0.1875rem solid $dark;
+  }
+  
+  .greeting span nav-greet {
+    color: white; 
+  }
+  
+  /***login form***/
+  
+  .login-form {
+    color: $white;
+    margin-left: 10px; 
+    padding: 15.5px; 
+    text-align: center; 
+  }
+  
+  .login-form h1 {
+    margin-left: 10px; 
+  }
+  
+  .login-from button {
+    padding: 20px; 
+  }
+  
+  .login-form label {
+    color: var(--primary-light-blue);
+  }
+  
+  /***sign up form***/
+  
+  .signup-form {
+    color: $white;
+    margin-left: 10px; 
+    padding: 15.5px; 
+    text-align: center;
+  }
+  
+  .signup-form .email-sign {
+    padding: 15px; 
+  }
+  
+  .signup-form label {
+    color: var(--primary-light-blue);
+  }
+  
+  /***logout***/
+  
+  .logout-main h1 {
+    text-align: center;
+  }
+  
+  .logout-main h2 {
+    text-align: center;
+  }
+  
+  /***homepage***/
+  
+  .homepage {
+    text-align: center; 
+  }
+  
+  .homepage .dog-profile {
+    border: 2.5px solid $white; 
+  }
+  
+  .homepage .events-profile {
+    border: 2.5px solid $white; 
+    background-color: $grey;
+    opacity: 80%; 
+    color: $white; 
+  }
+  
+  .homepage .textarea {
+    color: $white; 
+  }
+  
+  /***profile page***/
+  
+  .profile-greeting {
+    text-align: center;
+  }
+  
+  .container {
+    text-align: center;
+    color: $dark; 
+  }
+  
+  /***connect page***/
+  
+  table {
+    color: $dark;
+    text-transform: uppercase;
+    justify-content: center; 
+  }
+  
+  /***park***/
+  
+  footer {
+    text-align: center;
+  }
+  
+  
