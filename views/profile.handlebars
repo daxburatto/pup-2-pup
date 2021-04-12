@@ -1,83 +1,76 @@
-<h1 class="text-center text-uppercase">Hello, {{user.username}}</h1>
+<div class='profile-greeting'>
+    <h1>Hello, {{user.username}}</h1>
 
-<br>
-<br>
-<br>
+    <br>
+
+    <h2>Tell us about your dog!</h2>
+</div>
+
+<br><br>
+<br><br>
+<br><br>
 
 <div class="container">
-    <div class="row">
-        <div class="col-4">
-            <h2 class="text-center">Dogs You've Added</h2>
-            
-            {{#each user.dogs}}
-            <a class="row justify-content-center" href="/Dog/{{this.id}}">{{this.name}}</a>
-            {{/each}}
-        </div>
+    <div class="row justify-content-center">
+        <form class="dog-form">
+            <div>
+                <label for="dog-name">Name:</label>
+                <input type="text" placeholder="Bones" id="dog-name" />
+            </div>
 
-        <div class="col-8">
-            <h2 class="">Add a dog!</h2>
+            <div>
+                <label for="dog-breed">Breed:</label>
+                <input type="text" placeholder="German Shepherd" id="dog-breed" />
+            </div>
 
-            <form class="dog-form">
-                <div>
-                    <label for="dog-name">Name:</label>
-                    <input type="text" placeholder="Name" id="dog-name" />
-                </div>
+            <div>
+                <label for="dog-gender">Gender:</label>
+                <input type="text" placeholder="Male/Female" id="dog-gender" />
+            </div>
 
-                <div>
-                    <label for="dog-breed">Breed:</label>
-                    <input type="text" placeholder="Breed" id="dog-breed" />
-                </div>
+            <div>
+                <label for="dog-age">Age:</label>
+                <input type="number" placeholder="Ex: 1" id="dog-age" />
+            </div>
 
-                <div>
-                    <label for="dog-gender">Gender:</label>
-                    <input type="text" placeholder="Male/Female" id="dog-gender" />
-                </div>
+            <div>
+                <label for="dog-bio">Bio:</label>
+                <input type="text" placeholder="Happy" id="dog-bio" />
+            </div>
 
-                <div>
-                    <label for="dog-age">Age:</label>
-                    <input type="number" placeholder="Ex: 1" id="dog-age" />
-                </div>
+            <div>
+                <label for="dog-weight">Weight:</label>
+                <input type="number" placeholder="Ex: 20" id="dog-weight" />
+            </div>
 
-                <div>
-                    <label for="dog-bio">Bio:</label>
-                    <input type="text" placeholder="A happy dog" id="dog-bio" />
-                </div>
+            <div>
+                <label for="dog-energy">Energy:</label>
+                <input type="number" placeholder="Enter a number 1-5 (low-high)" id="dog-energy" />
+            </div>
 
-                <div>
-                    <label for="dog-weight">Weight:</label>
-                    <input type="number" placeholder="Ex: 20" id="dog-weight" />
-                </div>
+            <div>
+                <label for="dog-patience">Patience:</label>
+                <input type="number" placeholder="Enter a number 1-5 (low-high)" id="dog-patience" />
+            </div>
 
-                <div>
-                    <label for="dog-energy">Energy:</label>
-                    <input type="number" placeholder="Enter a number 1-5 (low-high)" id="dog-energy" />
-                </div>
+            <div>
+                <label for="dog-dominance" class="dog-dominance">Dominance:</label>
+                <input type="number" placeholder="Enter a number 1-5 (low-high)" id="dog-dominance" />
+            </div>
 
-                <div>
-                    <label for="dog-patience">Patience:</label>
-                    <input type="number" placeholder="Enter a number 1-5 (low-high)" id="dog-patience" />
-                </div>
+            <div>
+                <label for="dog-image">Image:</label>
+                <input type="text" placeholder=" Ex: https://image.com" id="dog-image" />
+            </div>
 
-                <div>
-                    <label for="dog-dominance">Dominance:</label>
-                    <input type="number" placeholder="Enter a number 1-5 (low-high)" id="dog-dominance" />
-                </div>
+            <div>
+                <label for="user-id">User ID</label>
+                <input type="number" value="{{userid}}" readonly="readonly" id="user-id" />
+            </div>
 
-                <div>
-                    <label for="dog-image">Image:</label>
-                    <input type="text" placeholder=" Ex: https://image.com" id="dog-image" />
-                </div>
+            <button id="dog-submit" type="submit">Add Dog</button>
 
-                <div>
-                    <label for="user-id">User ID</label>
-                    <input type="number" value="{{userid}}" readonly="readonly" id="user-id" />
-                </div>
-
-                <button id="dog-submit" type="submit">Add Dog</button>
-
-            </form>
-
-        </div>
+        </form>
     </div>
 </div>
 

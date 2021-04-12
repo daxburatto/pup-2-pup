@@ -1,0 +1,41 @@
+form {
+    margin: auto;
+  }
+  
+  html {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100%;
+  }
+  
+  .loginBox {
+    max-width: 300px;
+    margin: auto;
+    background-color: aquamarine;
+    padding: 20px;
+    border: transparent solid 1px;
+    border-radius: 5px;
+  }
+  
+  .title, .subtitle {
+    font-family: sans-serif;
+    color: #0000;
+    text-shadow: 0 0 2px black;
+  }
+  
+  .modal-card-body {
+    background-image: url("../../");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .modal-card-body .head {
+    background-color: aquamarine;
+  }
+  
+  .modal-card-body .foot {
+    background-color: aquamarine;
+  }
+  /*# sourceMappingURL=logon.css.map */

@@ -12,5 +12,9 @@ async function logout() {
     }
   }
   
+<<<<<<< HEAD
   document.querySelector('#logout').addEventListener('click', logout);
   
+=======
+  document.querySelector('#logout').addEventListener('click', logout);
+>>>>>>> hbs-page
